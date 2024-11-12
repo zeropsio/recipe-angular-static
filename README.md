@@ -1,27 +1,35 @@
-# RecipeAngularStatic
+# Zerops x Angular - Static
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.3.
+[Zerops](https://zerops.io) makes deploying and running Angular apps, both server side rendered and static, a breeze. This recipe showcases the Static version.
 
-## Development server
+<br/>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Deploy on Zerops
 
-## Code scaffolding
+You can either click the deploy button to deploy directly on Zerops, or manually copy the [import yaml](https://github.com/zeropsio/recipe-angular-static/blob/main/zerops-project-import.yml) to the import dialog in the Zerops app.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<br/>
 
-## Build
+[![Deploy on Zerops](https://github.com/zeropsio/recipe-shared-assets/blob/main/deploy-button/green/deploy-button.svg)](https://app.zerops.io/recipe/angular-static)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+<br/>
 
-## Running unit tests
+## Recipe features
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Latest version of **Angular** with SSG running on a **Zerops Static** service.
 
-## Running end-to-end tests
+<br/>
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Production vs. development
 
-## Further help
+This recipe is ready for production as is, and will scale horizontally by adding more containers in case of high traffic surges. If you want to achieve the highest baseline reliability and resiliace, start with at least two containers (add `minContainers: 2` in recipe YAML in the `app` service section, or change the minimum containers in "Automatic Scaling configuration" section of service detail).
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+<br/>
+
+## Changes made over the default installation
+
+If you want to modify your existing Angular app to efficiently run on Zerops, there are no changes needed in the codebase on top of the standard installation, just add [zerops.yml](https://github.com/zeropsio/recipe-angular-static/blob/main/zerops.yml) to your repository.
+
+<br/>
+
+Need help setting your project up? Join the [Zerops Discord community](https://discord.com/invite/WDvCZ54).

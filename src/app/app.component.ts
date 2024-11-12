@@ -5,9 +5,15 @@ import { RouterOutlet } from '@angular/router';
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  template: ` <router-outlet></router-outlet> `,
+  styles: [
+    `
+      :host {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+    `,
+  ],
 })
-export class AppComponent {
-  title = 'recipe-angular-static';
-}
+export class AppComponent {}
